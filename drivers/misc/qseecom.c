@@ -3487,9 +3487,9 @@ exit_register_bus_bandwidth_needs:
 		mutex_lock(&qsee_bw_mutex);
 		uret = qseecom_unregister_bus_bandwidth_needs(data);
 		mutex_unlock(&qsee_bw_mutex);
-		if (uret) {
-		pr_err("Failed to unregister bus bw needs %d, scm_call ret %d\n",uret, ret);
-		}
+		if (uret)
+			pr_err("Failed to unregister bus bw needs %d, scm_call ret %d\n",
+								uret, ret);
 	}
 
 exit_cpu_restore:
