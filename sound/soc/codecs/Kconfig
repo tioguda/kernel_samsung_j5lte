@@ -566,7 +566,7 @@ config SW_100K_TO_GND
 	use 100K ohm in pmic to detect specific cable
 
 config SOUND_CONTROL_HAX_3_GPL
-	tristate "new wcd9xxx sound control hax"
-	default n
+	tristate "Faux Sound Control v4.1"
+	default y
 	help
-		FauxSound wcd9xxx chipset sound control hacks 3.0 for deeper hax 
+		Faux Sound Control v4.1, enhanced by Shoaib Anwar a.k.a Shoaib0597 and robcore.
