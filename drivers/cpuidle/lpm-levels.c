@@ -48,7 +48,9 @@
 #ifdef CONFIG_SEC_GPIO_DVS
 #include <linux/secgpio_dvs.h>
 #endif
+#ifdef CONFIG_CX_VOTE_TURBO
 #include "lpm-workarounds.h"
+#endif
 #include <trace/events/power.h>
 #define CREATE_TRACE_POINTS
 #include <trace/events/trace_msm_low_power.h>
@@ -606,6 +608,7 @@ static void cluster_unprepare(struct lpm_cluster *cluster,
 	level = &cluster->levels[cluster->last_level];
 	if (level->notify_rpm) {
 		msm_rpm_exit_sleep();
+
 		msm_mpm_exit_sleep(from_idle);
 	}
 
