@@ -4342,7 +4342,6 @@ static int msm8x16_wcd_codec_probe(struct snd_soc_codec *codec)
  	pr_info("msm8x16_wcd codec probe...\n");
  	fauxsound_codec_ptr = codec;
 #endif
- 
 
 	dev_dbg(codec->dev, "%s()\n", __func__);
 
