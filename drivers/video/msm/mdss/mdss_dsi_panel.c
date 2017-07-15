@@ -30,6 +30,10 @@
 /*#define PANEL_CMD_DEBUG*/
 #endif
 
+#if defined(CONFIG_TOUCH_DISABLER)
+#include <linux/input/touch_disabler.h>
+#endif
+
 #define DT_CMD_HDR 6
 
 /* NT35596 panel specific status variables */
@@ -732,6 +736,9 @@ end:
 #endif
 
 	pr_info("%s:-\n", __func__);
+#if defined(CONFIG_TOUCH_DISABLER)
+        touch_disabler_set_touch_status(true);
+#endif
 	return 0;
 }
 
@@ -776,6 +783,9 @@ static int mdss_dsi_panel_off(struct mdss_panel_data *pdata)
 
 end:
 	pr_info("%s:-\n", __func__);
+#if defined(CONFIG_TOUCH_DISABLER)
+	touch_disabler_set_touch_status(false);
+#endif
 	return 0;
 }
 
