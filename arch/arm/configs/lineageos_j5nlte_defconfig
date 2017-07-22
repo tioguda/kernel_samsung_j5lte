@@ -2122,6 +2122,11 @@ CONFIG_THERMAL_QPNP_ADC_TM=y
 CONFIG_SSB_POSSIBLE=y
 
 #
+# IntelliThermal
+#
+CONFIG_INTELLI_THERMAL=y
+
+#
 # Sonics Silicon Backplane
 #
 # CONFIG_SSB is not set
